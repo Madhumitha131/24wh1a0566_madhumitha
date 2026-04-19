@@ -1,0 +1,34 @@
+package src;
+
+
+
+import java.sql.*;
+
+public class Create {
+
+    public static void main(String[] args) {
+
+        try {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/college",
+                "root",
+                "Madhu@13"
+            );
+
+            System.out.println("Connected Successfully!");
+
+            Statement stmt = con.createStatement();
+
+            stmt.executeUpdate(
+                "INSERT INTO students (id, name, marks) VALUES (4, 'madhu', 60)"
+            );
+
+            System.out.println("Inserted Successfully!");
+
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
