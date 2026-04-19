@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+    <book category="programming">
+        <title lang="en">Software Engineering</title>
+        <author>Ian Sommerville</author>
+        <publisher>Pearson</publisher>
+        <price>550</price>
+        <year>2020</year>
+    </book>
+    <book category="database">
+        <title lang="en">Database System Concepts</title>
+        <author>Abraham Silberschatz</author>
+        <publisher>McGraw Hill</publisher>
+        <price>650</price>
+        <year>2019</year>
+    </book>
+    <book category="networking">
+        <title lang="en">Computer Networks</title>
+        <author>Andrew S. Tanenbaum</author>
+        <publisher>Prentice Hall</publisher>
+        <price>600</price>
+        <year>2018</year>
+    </book>
+</bookstore>
