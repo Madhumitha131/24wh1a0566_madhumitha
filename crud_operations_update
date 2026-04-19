@@ -2,7 +2,7 @@ package src;
 
 import java.sql.*;
 
-public class Read {
+public class Update {
     public static void main(String[] args) {
         try {
             Connection con = DriverManager.getConnection(
@@ -15,16 +15,12 @@ public class Read {
 
             Statement stmt = con.createStatement();
 
-            // READ operation (SELECT)
-            ResultSet rs = stmt.executeQuery("SELECT * FROM students");
+            // UPDATE operation
+            int rows = stmt.executeUpdate(
+                "UPDATE students SET name='Jane Doe' WHERE id=3"
+            );
 
-            while (rs.next()) {
-                System.out.println(
-                    rs.getInt("id") + " - " +
-                    rs.getString("name") + " - " +
-                    rs.getInt("marks")
-                );
-            }
+            System.out.println(rows + " record updated successfully!");
 
             con.close();
 
